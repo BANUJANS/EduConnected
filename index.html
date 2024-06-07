@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Directory</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <section id="filter" >
+            <h2>Filter Teachers</h2>
+            <label  for="language">Language:</label>
+            <select  id="language">
+                <option value="all">All</option>
+                <option value="tamil">Tamil</option>
+                <option value="english">English</option>
+                <option value="sinhala">Sinhala</option>
+            </select>
+
+            <label for="grade">Grade:</label>
+            <select id="grade">
+                <option value="all">All</option>
+                <option value="o/l">O/L</option>
+                <option value="a/l">A/L</option>
+                <option value="11">11</option>
+                <option value="10">10</option>
+                <option value="9">9</option>
+                <!-- Add more grades as needed -->
+            </select><br>
+
+            <button onclick="filterTeachers()">Filter</button>
+        </section>
+
+        <button id="add-teacher-btn">Add Your Profile<br>(Teachers Used Only)</button>
+
+        <section id="teachers">
+            <!-- Teacher profiles will be inserted here dynamically -->
+        </section>
+
+        <div id="teacher-form-popup" class="popup">
+            <div class="popup-content">
+                <span class="close-btn" onclick="closePopup()">&times;</span>
+                <h2>Add Teacher Profile</h2>
+                <form id="teacher-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required><br>
+                    
+                    <label for="teacher-language">Language:</label>
+                    <select id="teacher-language" required>
+                        <option value="tamil">Tamil Medium</option>
+                        <option value="english">English Medium</option>
+                        <option value="sinhala">Sinhala Medium</option>
+                    </select><br>
+
+                    <label for="teacher-grade">Grade:</label>
+                    <select id="teacher-grade" required>
+                        <option value="a/l">A/L</option>
+                        <option value="o/l">O/L</option>
+                        <option value="10">10</option>
+                        <option value="9">6 to 9</option>
+                        <!-- Add more grades as needed -->
+                    </select><br>
+
+                    <label for="Subject">Subject:</label>
+                    <input type="text" id="Subject" required><br>
+            
+                    <label for="fees">Fees:</label>
+                    <input type="text" id="fees" required><br>
+                    
+                    <label for="time">Teaching Time:</label>
+                    <input type="text" id="time" required><br>
+                    
+                    <label for="video">Teaching Video URL:</label>
+                    <input type="url" id="video" required><br>
+
+                    <label for="contact">Contact Number:</label>
+                    <input type="text" id="contact" required><br>
+
+                    <label for="whatsapp">WhatsApp Number:</label>
+                    <input type="text" id="whatsapp" required><br>
+
+                    <label for="photo">Profile Photo:</label>
+                    <input type="file" id="photo" accept="image/*" required><br><br>
+                    
+                    <button id="button" type="button" onclick="addTeacher()">Add Your Profile</button>
+                
+                </form>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
